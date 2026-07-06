@@ -50,7 +50,7 @@ python -m http.server 5510
 ## ⚠️ Placeholders a reemplazar antes de publicar
 
 - [ ] **WhatsApp:** editar `YAM.whatsapp` en [`assets/js/main.js`](assets/js/main.js) (formato `549…`, sin `+`). Hoy vacío → abre WhatsApp sin destinatario.
-- [ ] **Fotos:** los bloques `.photo-ph` (hero usa composición tipográfica; Paola y Estudio usan placeholders) van reemplazados por **fotografía real** del estudio y de Paola (editorial, luz natural).
+- [x] **Fotos:** hero, Paola y El Estudio ya usan fotos reales (`assets/img/hero.jpg`, `paola.jpg`, `estudio-1.jpg`, `estudio-2.jpg`). Si Yam tiene fotos propias del estudio/Paola, se reemplazan esos archivos (mismos nombres) y listo.
 - [ ] **Datos con `*`:** años de práctica, máx. personas por clase y horarios son provisorios — confirmar con Paola.
 - [ ] **Clases:** modalidades y duraciones son tentativas hasta confirmar la oferta real.
 

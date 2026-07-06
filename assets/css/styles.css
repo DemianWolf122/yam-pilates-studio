@@ -403,8 +403,24 @@ ul { list-style: none; }
 .photo-ph--wide { --ph-ratio: 16 / 10; }
 .photo-ph--tall { --ph-ratio: 3 / 4; }
 
-.media-duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; }
+.media-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .media-duo .photo-ph--sq { --ph-ratio: 1 / 1; }
+
+/* Foto real enmarcada (estética editorial: filete camel + margen crema) */
+.frame {
+  border: 1px solid rgba(195, 154, 107, 0.55);
+  padding: 0.55rem;
+  background: var(--crema-claro);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.frame img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: var(--ph-ratio, 4 / 5);
+}
+.frame--tall img { --ph-ratio: 3 / 4; }
 
 /* ---------- Clases ---------- */
 .clases__grid {
