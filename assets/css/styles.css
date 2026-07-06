@@ -196,7 +196,7 @@ ul { list-style: none; }
   transition: color 0.4s ease;
 }
 .brand__yam  { font-family: var(--serif); font-weight: 700; font-size: 1.7rem; letter-spacing: 0.01em; }
-.brand__studio { font-family: var(--script); font-size: 2.5rem; margin-left: -0.18em; color: var(--terracota); line-height: 0.6; }
+.brand__studio { font-family: var(--script); font-size: 2.5rem; margin-left: 0.1em; color: var(--terracota); line-height: 0.6; }
 
 /* Marca en claro cuando el nav está transparente sobre el hero */
 .nav:not(.scrolled) .brand { color: var(--crema-claro); }
@@ -278,14 +278,12 @@ ul { list-style: none; }
     linear-gradient(101deg, rgba(28, 20, 13, 0.9) 0%, rgba(38, 27, 18, 0.64) 34%, rgba(52, 37, 25, 0.32) 62%, rgba(60, 44, 30, 0.16) 100%),
     linear-gradient(0deg, rgba(26, 18, 12, 0.72) 0%, rgba(26, 18, 12, 0) 42%);
 }
-.hero__frame {
-  position: absolute;
-  inset: clamp(1rem, 2.5vw, 2rem);
-  border: 1px solid rgba(195, 154, 107, 0.5);
-  z-index: -1;
-  pointer-events: none;
+.hero__inner {
+  max-width: 40rem;
+  text-shadow: 0 2px 18px rgba(26, 18, 12, 0.45);
+  margin-inline: 0;
+  margin-left: max(0px, calc((100% - var(--container)) / 2));
 }
-.hero__inner { max-width: 40rem; text-shadow: 0 2px 18px rgba(26, 18, 12, 0.45); }
 .hero .kicker { color: var(--camel); }
 
 .hero__title {
