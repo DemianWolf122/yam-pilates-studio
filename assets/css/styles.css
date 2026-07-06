@@ -262,7 +262,7 @@ ul { list-style: none; }
   padding-block: 8rem 4rem;
   /* Foto del estudio con tinte amarronado (capa marrón en multiply) */
   background-image:
-    linear-gradient(rgba(86, 58, 38, 0.42), rgba(70, 48, 33, 0.42)),
+    linear-gradient(rgba(86, 58, 38, 0.34), rgba(70, 48, 33, 0.34)),
     url('../img/hero.jpg');
   background-blend-mode: multiply, normal;
   background-size: cover;
@@ -288,32 +288,13 @@ ul { list-style: none; }
 .hero__inner { max-width: 40rem; text-shadow: 0 2px 18px rgba(26, 18, 12, 0.45); }
 .hero .kicker { color: var(--camel); }
 
-.hero__lockup {
-  display: flex;
-  align-items: baseline;
-  gap: 0.05em;
-  line-height: 0.9;
-  margin-bottom: 0.4rem;
-}
-.hero__yam {
+.hero__title {
   font-family: var(--serif);
-  font-weight: 700;
-  font-size: clamp(4.2rem, 2.5rem + 12vw, 9rem);
-  letter-spacing: 0.01em;
-}
-.hero__studio {
-  font-family: var(--script);
-  font-size: clamp(4.5rem, 2.5rem + 13vw, 9.5rem);
-  color: var(--camel);
-  margin-left: -0.14em;
-  transform: translateY(0.12em);
-}
-.hero__slogan {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.3rem, 1rem + 1.6vw, 2rem);
-  color: rgba(250, 246, 239, 0.92);
-  margin-bottom: 1.6rem;
+  font-weight: 400;
+  font-size: clamp(2rem, 1.5rem + 2.7vw, 3.7rem);
+  line-height: 1.14;
+  letter-spacing: 0.005em;
+  margin-bottom: 1.5rem;
 }
 .hero__sub {
   color: rgba(250, 246, 239, 0.88);
