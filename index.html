@@ -3,67 +3,307 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yam Pilates Studio</title>
-  <meta name="description" content="Yam Pilates Studio — La energía de fluir en movimiento. Punta Mogotes, Mar del Plata." />
-  <style>
-    :root {
-      --fondo: #f4f1ec;
-      --texto: #3a3a38;
-      --acento: #8a9a8b;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--fondo);
-      color: var(--texto);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    .contenido { max-width: 640px; }
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      font-weight: 300;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-    .slogan {
-      margin-top: 1rem;
-      font-size: clamp(1rem, 3vw, 1.4rem);
-      font-style: italic;
-      color: var(--acento);
-      letter-spacing: 0.05em;
-    }
-    .datos {
-      margin-top: 2.5rem;
-      font-size: 0.95rem;
-      line-height: 1.9;
-      opacity: 0.85;
-    }
-    .datos a { color: var(--acento); text-decoration: none; }
-    .datos a:hover { text-decoration: underline; }
-    .proximamente {
-      margin-top: 2.5rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      opacity: 0.5;
-    }
-  </style>
+  <title>Yam Pilates Studio — Pilates boutique en Punta Mogotes</title>
+  <meta name="description" content="Yam Pilates Studio: la energía de fluir en movimiento. Pilates boutique en Punta Mogotes, Mar del Plata, en grupos reducidos y con atención personalizada de Paola Parra." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yam Pilates Studio — Pilates boutique en Punta Mogotes" />
+  <meta property="og:description" content="La energía de fluir en movimiento. Pilates en grupos reducidos con atención personalizada." />
+  <meta property="og:locale" content="es_AR" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Tipografías: Italianno (script) + Jost (sans). Libertinus Serif se carga en el CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <main class="contenido">
-    <h1>Yam Pilates</h1>
-    <p class="slogan">La energía de fluir en movimiento</p>
-    <div class="datos">
-      <p>Instructora Paola Parra</p>
-      <p>Puan 1873 · Punta Mogotes</p>
-      <p><a href="https://instagram.com/yam_pilates" target="_blank" rel="noopener">@yam_pilates</a></p>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Yam Pilates Studio — inicio">
+        <span class="brand__yam">Yam</span><span class="brand__studio">studio</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a class="nav__link" href="#enfoque">Enfoque</a>
+        <a class="nav__link" href="#paola">Paola</a>
+        <a class="nav__link" href="#estudio">El Estudio</a>
+        <a class="nav__link" href="#clases">Clases</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+        <a class="btn nav__cta" href="#contacto" data-whatsapp>Reservar</a>
+      </nav>
+
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <p class="proximamente">Sitio en construcción</p>
-  </main>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-label="Presentación">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <span class="kicker reveal">Pilates boutique · Punta Mogotes</span>
+      <h1 class="hero__lockup reveal" data-delay="1" aria-label="Yam Studio">
+        <span class="hero__yam">Yam</span><span class="hero__studio">studio</span>
+      </h1>
+      <p class="hero__slogan reveal" data-delay="1">La energía de fluir en movimiento</p>
+      <p class="hero__sub reveal" data-delay="2">
+        Encontrá tu equilibrio en movimiento: pilates en grupos reducidos y con
+        atención personalizada, en un espacio íntimo y luminoso.
+      </p>
+      <div class="hero__actions reveal" data-delay="3">
+        <a class="btn" href="#contacto" data-whatsapp>Reservar clase</a>
+        <a class="btn btn--outline btn--on-dark" href="https://instagram.com/yam_pilates" target="_blank" rel="noopener">Ver Instagram</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span>Scroll</span></div>
+  </section>
+
+  <!-- ================= ENFOQUE ================= -->
+  <section class="section" id="enfoque">
+    <div class="container">
+      <div class="enfoque__head">
+        <span class="kicker reveal">Nuestro enfoque</span>
+        <h2 class="title reveal" data-delay="1">Pilates con criterio,<br>no clases sueltas</h2>
+        <p class="enfoque__tagline reveal" data-delay="2">No es solo moverse: es <em>fluir</em> con criterio.</p>
+        <p class="lead reveal" data-delay="2" style="margin-top:1.5rem">
+          En Yam trabajamos el cuerpo de forma consciente y progresiva. Cada clase
+          suma sobre la anterior: fuerza real, movilidad y control, con un
+          acompañamiento cercano que respeta tu ritmo.
+        </p>
+      </div>
+
+      <div class="focos">
+        <article class="foco reveal">
+          <span class="foco__num">01</span>
+          <h3>Estabilidad del centro</h3>
+          <p>Un core fuerte y consciente como base de todo el movimiento.</p>
+        </article>
+        <article class="foco reveal" data-delay="1">
+          <span class="foco__num">02</span>
+          <h3>Fuerza funcional</h3>
+          <p>Fuerza que se traslada a tu día a día, no solo a la colchoneta.</p>
+        </article>
+        <article class="foco reveal" data-delay="2">
+          <span class="foco__num">03</span>
+          <h3>Movilidad de columna</h3>
+          <p>Espalda más libre y postura cuidada, clase a clase.</p>
+        </article>
+        <article class="foco reveal" data-delay="3">
+          <span class="foco__num">04</span>
+          <h3>Control y respiración</h3>
+          <p>Coordinar respiración y movimiento para fluir con precisión.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- onda "fluir" -->
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="height:48px">
+    <path d="M0,32 C240,64 480,0 720,24 C960,48 1200,8 1440,36" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  </svg>
+
+  <!-- ================= PAOLA ================= -->
+  <section class="section section--arena" id="paola">
+    <div class="container split">
+      <div class="split__media reveal">
+        <div class="photo-ph photo-ph--tall">
+          <div class="photo-ph__inner">
+            <span class="photo-ph__tag">Foto · retrato</span>
+            <span class="photo-ph__desc">Paola en el estudio</span>
+          </div>
+        </div>
+      </div>
+      <div class="split__body reveal" data-delay="1">
+        <span class="kicker">Tu instructora</span>
+        <h2 class="title">Hola, soy <em>Paola</em></h2>
+        <p>
+          Instructora de pilates y creadora de Yam. Me formé para acompañar cada
+          cuerpo desde donde está, con paciencia y precisión. Creo en el
+          movimiento como una forma de reencontrarte con vos misma.
+        </p>
+        <p>
+          En Yam vas a entrenar en un espacio cuidado, con grupos reducidos y una
+          mirada atenta en cada ejercicio. Nada de fórmulas apuradas: constancia,
+          técnica y disfrute.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">+10</div>
+            <div class="stat__label">Años de práctica*</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">Máx. 4</div>
+            <div class="stat__label">Personas por clase*</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EL ESTUDIO ================= -->
+  <section class="section" id="estudio">
+    <div class="container split split--reverse">
+      <div class="split__media reveal">
+        <div class="media-duo">
+          <div class="photo-ph photo-ph--tall">
+            <div class="photo-ph__inner">
+              <span class="photo-ph__tag">Foto · interior</span>
+              <span class="photo-ph__desc">El espacio</span>
+            </div>
+          </div>
+          <div class="photo-ph photo-ph--sq">
+            <div class="photo-ph__inner">
+              <span class="photo-ph__tag">Detalle</span>
+              <span class="photo-ph__desc">Reformer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="split__body reveal" data-delay="1">
+        <span class="kicker">El estudio</span>
+        <h2 class="title">Un espacio íntimo<br>y luminoso</h2>
+        <p>
+          Yam es un estudio boutique pensado para que cada clase se sienta
+          personal. Luz natural, equipamiento cuidado y grupos chicos para que
+          nunca dejes de sentirte acompañada.
+        </p>
+        <p>
+          Un lugar donde bajar el ritmo del afuera y reconectar con tu cuerpo,
+          a tu tiempo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLASES ================= -->
+  <section class="section section--arena" id="clases">
+    <div class="container">
+      <div style="max-width:46rem">
+        <span class="kicker reveal">Clases</span>
+        <h2 class="title reveal" data-delay="1">Modalidades para<br>cada momento</h2>
+      </div>
+
+      <div class="clases__grid">
+        <article class="clase reveal">
+          <span class="clase__meta">~50 min · Individual</span>
+          <h3>Reformer individual</h3>
+          <p>Solo vos y tu instructora. Atención total, ritmo a tu medida y una progresión hecha para tu cuerpo.</p>
+          <div class="clase__foot">Ideal para empezar o afinar técnica</div>
+        </article>
+        <article class="clase reveal" data-delay="1">
+          <span class="clase__meta">~50 min · Grupo reducido</span>
+          <h3>Reformer en grupo</h3>
+          <p>Grupos chicos y entrenamiento estructurado. La energía de entrenar acompañada sin perder el seguimiento cercano.</p>
+          <div class="clase__foot">La experiencia Yam por excelencia</div>
+        </article>
+        <article class="clase reveal" data-delay="2">
+          <span class="clase__meta">~50 min · Colchoneta</span>
+          <h3>Mat &amp; core</h3>
+          <p>Trabajo de piso con tu propio peso y elementos: fuerza, movilidad y control de centro, sin reformer.</p>
+          <div class="clase__foot">Complemento perfecto del reformer</div>
+        </article>
+      </div>
+
+      <p class="clases__note reveal">Tarifas y disponibilidad <span>por consulta directa</span></p>
+    </div>
+  </section>
+
+  <!-- ================= SALUD ================= -->
+  <section class="section" id="salud">
+    <div class="container">
+      <div style="max-width:48rem">
+        <span class="kicker reveal">Pilates &amp; salud</span>
+        <h2 class="title reveal" data-delay="1">Un aliado para tu bienestar</h2>
+        <p class="lead reveal" data-delay="2" style="margin-top:1.4rem">
+          El pilates es un gran complemento para la reeducación corporal, la salud
+          postural y el acompañamiento de procesos de rehabilitación. Trabajamos de
+          forma cuidada y, cuando hace falta, en diálogo con tus profesionales.
+        </p>
+      </div>
+      <div class="salud__grid">
+        <div class="salud__item reveal">Reeducación postural y del movimiento</div>
+        <div class="salud__item reveal" data-delay="1">Acompañamiento en rehabilitación</div>
+        <div class="salud__item reveal" data-delay="2">Trabajo con kinesiólogos y profesionales</div>
+        <div class="salud__item reveal" data-delay="1">Prevención y cuidado de la espalda</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section class="section section--arena" id="contacto">
+    <div class="container contacto__grid">
+      <div class="reveal">
+        <span class="kicker">Reservá tu clase</span>
+        <h2 class="title">Escribinos y<br>coordinamos tu <em>lugar</em></h2>
+        <p class="lead" style="margin-top:1.3rem">
+          Contanos qué buscás y con qué disponibilidad. Paola te responde
+          personalmente por WhatsApp y armamos tu primera clase.
+        </p>
+        <div class="contacto__actions">
+          <a class="btn" href="#" data-whatsapp>Reservar por WhatsApp</a>
+          <a class="btn btn--outline" href="https://instagram.com/yam_pilates" target="_blank" rel="noopener">@yam_pilates</a>
+        </div>
+      </div>
+
+      <div class="reveal" data-delay="1">
+        <ul class="info-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span><span class="info-label">Dónde</span>Puan 1873, Punta Mogotes<br>Mar del Plata</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg>
+            <span><span class="info-label">Horarios</span>Mañana y tarde, a coordinar*</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            <span><span class="info-label">Instagram</span><a href="https://instagram.com/yam_pilates" target="_blank" rel="noopener">@yam_pilates</a></span>
+          </li>
+        </ul>
+        <a class="btn btn--outline" style="margin-top:1.5rem" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Puan%201873%20Punta%20Mogotes%20Mar%20del%20Plata">Ver en Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a class="brand" href="#top" aria-label="Yam Pilates Studio">
+            <span class="brand__yam">Yam</span><span class="brand__studio">studio</span>
+          </a>
+          <p class="footer__slogan">La energía de fluir en movimiento</p>
+        </div>
+        <nav class="footer__nav" aria-label="Navegación del pie">
+          <a href="#enfoque">Enfoque</a>
+          <a href="#paola">Paola</a>
+          <a href="#clases">Clases</a>
+          <a href="#contacto">Contacto</a>
+          <a href="https://instagram.com/yam_pilates" target="_blank" rel="noopener">Instagram</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Yam Pilates Studio · Punta Mogotes</span>
+        <span>Puan 1873, Mar del Plata</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a class="wa-float" data-whatsapp href="#" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.28.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.55-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.22.24-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+  </a>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
