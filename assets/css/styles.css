@@ -473,12 +473,9 @@ ul { list-style: none; }
 /* ---------- Divisor de onda (fluir) ---------- */
 .wave { display: block; width: 100%; height: auto; color: var(--camel); }
 
-/* ---------- Reveal on scroll ---------- */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
-.reveal.in { opacity: 1; transform: none; }
-.reveal[data-delay="1"] { transition-delay: 0.1s; }
-.reveal[data-delay="2"] { transition-delay: 0.2s; }
-.reveal[data-delay="3"] { transition-delay: 0.3s; }
+/* ---------- Reveal on scroll (sutil, SOLO en imágenes; los textos no animan) ---------- */
+.split__media.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.split__media.reveal.in { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
