@@ -260,20 +260,23 @@ ul { list-style: none; }
   overflow: hidden;
   isolation: isolate;
   padding-block: 8rem 4rem;
-  /* Composición cálida con luz y sombra (sin dependencia de foto) */
-  background:
-    radial-gradient(120% 90% at 78% 8%, rgba(243, 236, 225, 0.22) 0%, rgba(243, 236, 225, 0) 42%),
-    linear-gradient(155deg, #6a5545 0%, #4a3b30 46%, #3a2e25 100%);
+  /* Foto del estudio con tinte amarronado (capa marrón en multiply) */
+  background-image:
+    linear-gradient(rgba(86, 58, 38, 0.42), rgba(70, 48, 33, 0.42)),
+    url('../img/hero.jpg');
+  background-blend-mode: multiply, normal;
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
 }
-/* Sombras proyectadas tipo luz de ventana */
+/* Overlay amarronado + gradientes de contraste para el texto */
 .hero::before {
   content: '';
   position: absolute; inset: 0; z-index: -1;
   background:
-    repeating-linear-gradient(122deg, rgba(0,0,0,0.16) 0 2px, rgba(0,0,0,0) 2px 108px),
-    repeating-linear-gradient(122deg, rgba(255, 244, 224, 0.05) 0 60px, rgba(0,0,0,0) 60px 150px);
-  mask-image: linear-gradient(120deg, #000 0%, rgba(0,0,0,0.15) 60%, transparent 90%);
-  opacity: 0.9;
+    linear-gradient(180deg, rgba(26, 18, 12, 0.55) 0%, rgba(26, 18, 12, 0) 22%),
+    linear-gradient(101deg, rgba(28, 20, 13, 0.9) 0%, rgba(38, 27, 18, 0.64) 34%, rgba(52, 37, 25, 0.32) 62%, rgba(60, 44, 30, 0.16) 100%),
+    linear-gradient(0deg, rgba(26, 18, 12, 0.72) 0%, rgba(26, 18, 12, 0) 42%);
 }
 .hero__frame {
   position: absolute;
@@ -282,7 +285,7 @@ ul { list-style: none; }
   z-index: -1;
   pointer-events: none;
 }
-.hero__inner { max-width: 40rem; }
+.hero__inner { max-width: 40rem; text-shadow: 0 2px 18px rgba(26, 18, 12, 0.45); }
 .hero .kicker { color: var(--camel); }
 
 .hero__lockup {
@@ -313,7 +316,7 @@ ul { list-style: none; }
   margin-bottom: 1.6rem;
 }
 .hero__sub {
-  color: rgba(250, 246, 239, 0.78);
+  color: rgba(250, 246, 239, 0.88);
   max-width: 42ch;
   margin-bottom: 2.4rem;
 }
